@@ -15,8 +15,6 @@ const useStyles = makeStyles({
         alignItems: "center",
     },
     image: {
-        width: "1000px",
-        height: "600px",
         borderRadius: "10px",
     },
     rightArrow: {

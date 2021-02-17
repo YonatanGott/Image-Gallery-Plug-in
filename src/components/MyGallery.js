@@ -15,7 +15,6 @@ import SlideshowIcon from "@material-ui/icons/Slideshow";
 import PageItems from "./PageItems";
 import SortImages from './SortImages';
 import GalleryCard from './GalleryCard';
-import GalleryCarousel from './GalleryCarousel';
 import Slider from "./Slider";
 
 // Component Styling
@@ -212,6 +211,7 @@ const MyGallery = (props) => {
     };
     // SlideShow
     const handleOpenSlides = () => {
+        setAutoPlay(true);
         setOpenSlides(true);
     };
     const SlideShow = () => {
