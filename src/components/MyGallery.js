@@ -16,6 +16,7 @@ import PageItems from "./PageItems";
 import SortImages from './SortImages';
 import GalleryCard from './GalleryCard';
 import GalleryCarousel from './GalleryCarousel';
+import Slider from "./Slider";
 
 // Component Styling
 const useStyles = makeStyles({
@@ -216,13 +217,11 @@ const MyGallery = (props) => {
     const SlideShow = () => {
         return (
             <Modal open={openSlides} onClose={handleClose} className={classes.modal}>
-                <GalleryCarousel
-                    imageArray={currentArray}
+                <Slider imageArray={currentArray}
                     autoPlay={autoPlay}
                     indicators={indicators}
                     index={imageIndex}
-                    interval={interval}
-                />
+                    interval={interval} />
             </Modal>
         );
     }
