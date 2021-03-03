@@ -164,12 +164,12 @@ const MyGallery = (props) => {
         let replace = e.target.value;
         let typeReg = new RegExp(replace, "i");
         setSearchInput(typeReg);
+        handleSearchSubmit(typeReg);
     };
-    const handleSearchSubmit = (e) => {
-        e.preventDefault();
+    const handleSearchSubmit = (input) => {
         setLoading(true);
         let imgArray = imagesArray.filter(
-            (image) => image.title.search(searchInput) !== -1
+            (image) => image.title.search(input) !== -1
         );
         setCurrentArray(imgArray);
         let searchArray = imgArray.slice(0, pageItems);
@@ -282,7 +282,7 @@ const MyGallery = (props) => {
                                 className={classes.formControl}
                                 onSubmit={handleSearchSubmit}
                             >
-                                <form onSubmit={handleSearchSubmit} className={classes.formSearch}>
+                                <form className={classes.formSearch}>
                                     <TextField
                                         id="search-input"
                                         label="Search by Title"
